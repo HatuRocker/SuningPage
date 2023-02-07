@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏宁易购登录界面</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        a{
+            color: #333;
+            outline: 0;
+            text-decoration:none;
+        }
+        div{
+            display: block;
+        }
+        .head{
+            width: 970px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .center{
+            height: 570px;
+            min-width: 970px;
+            
+        }
+        .login{
+            position: relative;
+            width: 360px;
+            height: 432px;
+            margin-top: 50px;
+            background: #fff;
+            box-shadow: 0 0 2px #ececec;
+            font-family: "Microsoft Yahei";
+        }
+        .tab_list{
+            height: 50px;
+            line-height: 20px;
+            font-size: 16px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+        .tab_item{
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 50%;
+            text-decoration: none;
+            text-align: center;
+        }
+        .tab_list span{
+            display: block;
+            border-right: 1px solid #eee;
+            margin-top: 15px;
+        }
+        .item{
+            padding: 0 24px;
+        }
+        .input_box{
+            position: relative;
+            border: 1px solid #ddd;
+            color: #999;
+            padding: 0 32px 0 36px;
+            height: 36px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .tab_content .item .input_box input{
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 36px;
+            padding: 0 32px 0 36px;
+            border: 0;
+            font-size: 14px;
+            margin-left: -36px;
+        }
+        .tab_content .item .input_box label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding-left: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            color: #ccc;
+            cursor: text;
+            background: #fff;
+        }
+        .name_icon{
+            width: 36px;
+            height: 366px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../images/sprite7.png) no-repeat;
+        }
+        .password_box{
+            margin-bottom: 20px;
+        }
+        .tab_content .item .password_box .input_box input{
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 36px;
+            padding: 0 32px 0 36px;
+            border: 0;
+            font-size: 14px;
+            margin-top: -36px;
+        }
+        .password_icon{
+            width: 36px;
+            height: 36px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../images/sprite8.png) no-repeat;
+        }
+        .center .login{
+            float: right;
+        }
+        
+        .open_app{
+            margin-bottom: 7px;
+            text-align: center;
+        }
+        .register{
+            text-align: center;
+            margin: 12px 0 35px;
+        }
+        
+        .otherLogin{
+            position: relative;
+            width: 310px;
+            margin: 0 auto;
+            border-top: 1px solid #ddd;
+            padding: 19px 0 17px;
+        }
+        .pattern{
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            margin-left: -64px;
+            color: #999;
+            width: 128px;
+            background: #fff;
+            text-align: center;
+            font-size: 12px;
+        }
+        .QQ {
+            float: left;
+            padding: 0 7px;
+            border-right: 1px solid #dedcd5;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        .wechat{
+            float: left;
+            padding: 0 7px;
+            border-right: 1px solid #dedcd5;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        .suningpay{
+            float: left;
+            padding: 0 7px;
+            border-right: 1px solid #dedcd5;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        .microblog{
+            float: left;
+            padding: 0 7px;
+            border-right: 1px solid #dedcd5;
+            line-height: 16px;
+            font-size: 12px;
+        }
+        .tail{
+            clear: both;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            font-size: 0;
+        }
+        .headLogo{
+            float: left;
+            width:189px;
+            height: 100%;
+            background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/header190-60.png) center no-repeat;
+        }
+        .headImg{
+            float: left;
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        .centerImg{
+            width: 570px;
+            height: 100%;
+            float: left;
+        }
+        .headFont1{
+            float: left;
+            color: #333;
+            background:#fefff1;
+            border: 1px solid #fecd66;
+            font-size: 12px;
+            padding: 4px 6px;
+        }
+        .headFont2{
+            float: right;
+            margin-top: 8px;
+            text-decoration: none;
+            font-size: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--头部-->
+    <div class="head">
+        <a href="http://www.suning.com/" target="_blank" class="headLogo"></a> 
+        <div style="margin-left:189px;padding:37px 0 0 16px">
+            <div style="margin-right:-100px">
+                <div class="headFont1">
+                根据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号绑定验证！
+                <a href="https://sale.suning.com/all/regProtocol/yssm.html" target="_blank">
+                    《隐私政策》
+                </a>
+                    已上线，将更有利于保护您的个人隐私。
+                </div>
+            </div>
+                <a href="https://qss.suning.com/ea486.htm" class="headFont2" target="_blank">
+                    <img src="../images/sprite1.png" class="headImg">
+                    我想对“登录”提意见
+                </a>
+        </div>
+    </div>
+    <!--中部-->
+    <div class="center" style="background: url(https://image.suning.cn/uimg/cms/img/167290330480421242.jpg) center no-repeat">
+        <div style="width: 970px; height: 100%; margin: 0 auto">
+            <a href="https://cuxiao.suning.com/scms/nhdjbfxhhc.html?safp=d488778a.8tLoX.oKx8J.1&safpn=10009" target="_blank" class="centerImg"></a>
+            <div class="login">
+                <div class="tab">
+                    <div class="tab_list">
+                        <a class="tab_item">
+                            <span>扫码登录</span>
+                        </a>
+                        <a class="tab_item" style="color: #ff6600;">
+                            <span>账户登录</span>
+                        </a>
+                    </div>
+                    <div class="tab_content">
+                        <div class="item">
+                            <div style="line-height: 40px;display: block;">&nbsp;</div>
+                            <div class="input_box">
+                                <input type="text">
+                                <label>用户明/手机/邮箱</label>
+                                <i class="name_icon"></i>
+                            </div>
+                                <div class="input_box">    
+                                    <input type="password">
+                                    <label style="display: block;">密码</label>
+                                    <i class="password_icon"></i> 
+                                </div>
+                            <div style="padding: 10px;line-height: 35px;height: 35px;font-size: 10px">
+                                <a style="float: left;text-decoration: none">
+                                <i style="background: url(../images/sprite9.png) no-repeat"></i>
+                                短信验证登录
+                                </a>
+                                <a style="float: right;">忘记密码</a>
+                            </div>
+                            <a style="display: block;width: 310px;line-height: 40px;margin: 0 auto;background: #f60;border-radius: 2px;font-size: 20px;font-weight: 700;text-align: center;color: #fff;">
+                            登 录
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+               
+                
+
+                <div class="register">
+                    <a href="#" class="toRegister" style="font-size: 12px;color: #ff6600;">
+                    注册 有惊喜 ></a>
+                </div>
+                <div class="otherLogin">
+                <span class="pattern">使用以下账号登录</span>
+                <div class="QQ">
+                    <a href="#">
+                        <img src="../images/sprite2.png" target="_blank">
+                        <i sytle="text-decoration: none;">QQ</i>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="wechat">
+                        <img src="../images/sprite3.png" target="_blank">
+                        微信
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="suningpay">
+                        <img src="../images/sprite4.png" target="_blank">
+                        易支付
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="microblog">
+                        <img src="../images/sprite5.png" target="_blank">
+                        微博
+                    </a>
+                </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        
+
+
+        
+    </div>
+    <div style="clear: both;display: block;height: 0;overflow: hidden;font-size:0"></div>
+     <!--尾部-->
+     <div class="tail">
+
+     </div>
+
+
+
+
+    
+
+
+
+
+
+    
+</body>
+</html>
